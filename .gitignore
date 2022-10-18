@@ -1,0 +1,4 @@
+go.work
+go.work.sum
+main/win32_hidapi
+main/config.toml
