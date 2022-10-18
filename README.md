@@ -15,11 +15,13 @@
 ## How it works
 **1. The Mode concept**
 
- The idea comes from Vim, it can be configured to have multiple modes: *normal*, *speech*, *motion control*. The Joy-Con has a very limited number of buttons, but the same button can trigger different actions in different modes, hence it's greatly extended.
+ The idea comes from Vim, it can be configured to have multiple modes: *normal*, *speech*, *motion control*. For example, hold down the shoulder button ZR to enter gyro mode and you can rotate it to move the mouse cursor, release it to get back to normal mode.
+ 
+ The Joy-Con has a very limited number of buttons, but the same button can trigger different actions in different modes. As there are more than 20 buttons on both side, 20 buttons an be configured to 20 modes, so in theory there are 400 buttons that can trigger different actions. Just bind some most used actions like <esc>, <enter> to the 20 buttons for the default mode.
 
 **2. Word Mapping**
 
- Words can be mapped to different actions like:
+ Speech words can be mapped to different actions like:
  - Replacement: `dash` -> `-`, `twenty twenty two` -> `2022`
  - Decoration: `snake hello world` -> `hello_world`, `camel hello world` -> `helloWorld`
  - Hotkey: `control alt delete` -> `task explorer launched`
