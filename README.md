@@ -14,9 +14,11 @@
 
 ## How it works
 **1. The Mode concept**
+
  The idea comes from Vim, there could be different kinds of modes: *normal*, *speech*, *motion control*. The Joy-Con has a very limited number of buttons, but the same button can trigger different actions in different modes, hence it's greatly extended.
 
 **2. Word Mapping**
+
  Words can be mapped to different actions like:
  - Replacement: `dash` -> `-`, `twenty twenty two` -> `2022`
  - Decoration: `snake hello world` -> `hello_world`, `camel hello world` -> `helloWorld`
@@ -24,6 +26,7 @@
  - Run shell script: `launch browser` -> `brave-browser --no-sandbox www.test.com`
 
 **3. Limit the dictionary for better accuracy**
+
   [VOSK](https://alphacephei.com/vosk/ "VOSK") is used as the backend recognition engine, with the [phrase_list](https://github.com/alphacep/vosk-server/blob/master/websocket/asr_server.py#L44 "phrase_list") parameter, it's possible to use a small dictionary, for instance, when the dictionary is limited to alphabet`a~z`,  the`c`will never be recognized as`sea`or`see`.
   For programming, switch to a speech mode with limited dictionary for typing keywords, punctuation, numbers. And use another mode with unlimited dictionary for variables and comments, once found a conflict, solve it by adding a word mapping.
 
@@ -109,10 +112,13 @@ A mode id must be assigned by parameter `-id`, it can be any string as long as n
 
 A Mode does very little, jobs are done by mode rules. There two types of rules:
 - `trigger` -> `action`
-**trigger**: one-time-event like button press, stick spinning, gyro rotating, speech text.
-**action**: what it will do when above signal is triggered.
+
+**trigger**: One-time-event like button press. When an input matches the trigger condition, the corresponding **action** is performed.
+
 - `switch` -> `modifier`
-**switch**: it can be turned on and off, when it's on, the **modifier** will be applied to the input signal.
+
+**switch**: It can be turned on and off, when it's on, the **modifier** will be applied to the input signal.
+
 e.g. `[switch] button -id R -> [boost] -speed 3` means when the button `R` is down, the cursor moves 3 times faster.
 
 **Some examples:**
@@ -127,7 +133,7 @@ When button A is down, speech text is decorated to camel+title case, e.g.: "hell
 Switch to MouseMode by holding R, release R go get back to default mode.
 
 
-**Note**: most parameters are set by single dash: `-text hello`, use double dash for boolean parameters: `--number=false`, and for array types: `-map a b c`, any special character should be wrapped with double quote, such as "-".
+**Note**: Most parameters are set by single dash: `-text hello`, use double dash for boolean parameters: `--number=false`, use space seperated strings for array types: `-map a b c`. For special character, it must be wrapped with double quote, such as "-".
 
 | trigger Type  | Description  | Parameters |
 | :------------ |:---------------| :-----|
@@ -167,7 +173,7 @@ A dictionary for limiting the speech model, only the words in the list are recog
 alphabet = ['a', 'b', 'c', ...'zed']
 golang = ['package', 'switch', ...'']
 ```
-Different groups can be used together for different speech modes. e.g. `-phrase alphabet punctuation application java lua`
+Different groups can be used together for different speech modes. e.g. `-phrase alphabet golang java`
 If you found some words conflict a lot, like `4` and `for`, remove the `for` from the phrase list, map `4 loop` -> `for` , or `forever`->`for` in the mapping section below. Then the conflict is avoided:
 - when you say `4`, it types `4`
 - when you say `4 loop` or `forever`, it types `for`
