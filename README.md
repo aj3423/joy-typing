@@ -4,8 +4,8 @@
 ## Joy Typing
 **Use your computer with Voice and Joy-Con**
 
-- Replace `Keyboard` -> `Voice Typing` + `Joy-Con Button`
-- Replace `Mouse` -> `Motion Control` + `Joy-Con Stick`
+- Replace `Keyboard` -> `Voice Typing` + `Joy-Con Button` [Video Demo](https://youtu.be/GGot8ldw61w)
+- Replace `Mouse` -> `Motion Control` + `Joy-Con Stick` [Video Demo](https://youtu.be/6HyuwI7pypk)
 
 **For those who wants to:**
  - Avoid maintaining the typing posture.
