@@ -1,0 +1,4 @@
+[
+	"var", "type", "package", "switch", "function", "go", "make", "new", "const", "unsigned", "int", "float", "byte", "array",
+	"spring", "print", "line", "format", "elephant"
+]
