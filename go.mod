@@ -1,4 +1,4 @@
-module github.com/aj3423/joy_typing
+module github.com/aj3423/joy-typing
 
 go 1.19
 

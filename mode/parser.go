@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/aj3423/joy_typing/joycon"
+	"github.com/aj3423/joy-typing/joycon"
 	"github.com/alexflint/go-arg"
 	"github.com/mattn/go-shellwords"
 )

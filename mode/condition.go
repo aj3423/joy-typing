@@ -1,7 +1,7 @@
 package mode
 
 import (
-	"github.com/aj3423/joy_typing/joycon"
+	"github.com/aj3423/joy-typing/joycon"
 )
 
 // For checking if an *Input matches the requirement

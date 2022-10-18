@@ -3,7 +3,7 @@ package mode
 import (
 	"fmt"
 
-	"github.com/aj3423/joy_typing/voice"
+	"github.com/aj3423/joy-typing/voice"
 )
 
 // mode it self does nothing,

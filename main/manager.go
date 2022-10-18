@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/aj3423/joy_typing/joycon"
-	"github.com/aj3423/joy_typing/mode"
+	"github.com/aj3423/joy-typing/joycon"
+	"github.com/aj3423/joy-typing/mode"
 	"github.com/gen2brain/beeep"
 	log "github.com/sirupsen/logrus"
 	"github.com/sstallion/go-hid"

@@ -7,8 +7,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/aj3423/joy_typing/joycon"
-	"github.com/aj3423/joy_typing/mode"
+	"github.com/aj3423/joy-typing/joycon"
+	"github.com/aj3423/joy-typing/mode"
 	"github.com/arturoeanton/go-notify"
 	"github.com/pelletier/go-toml/v2"
 	log "github.com/sirupsen/logrus"
