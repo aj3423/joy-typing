@@ -15,7 +15,7 @@
 ## How it works
 **1. The Mode concept**
 
- The idea comes from Vim, there could be different kinds of modes: *normal*, *speech*, *motion control*. The Joy-Con has a very limited number of buttons, but the same button can trigger different actions in different modes, hence it's greatly extended.
+ The idea comes from Vim, it can be configured to have multiple modes: *normal*, *speech*, *motion control*. The Joy-Con has a very limited number of buttons, but the same button can trigger different actions in different modes, hence it's greatly extended.
 
 **2. Word Mapping**
 
