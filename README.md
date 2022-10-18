@@ -206,8 +206,9 @@ Mappings are grouped and can be used together like `-map programming application
 
 ## Credits to
 1. This is greatly inspired by [Talon Voice](https://talonvoice.com/ )
-2. The awesome [dekuNukem/Nintendo_Switch_Reverse_Engineering](https://github.com/dekuNukem/Nintendo_Switch_Reverse_Engineering)
-3. All the Joy-Con protocol implementations:
+2. [VOSK](https://alphacephei.com/vosk/)
+3. The awesome [dekuNukem/Nintendo_Switch_Reverse_Engineering](https://github.com/dekuNukem/Nintendo_Switch_Reverse_Engineering)
+4. All the Joy-Con protocol implementations:
 [riking/joycon](https://github.com/riking/joycon "riking/joycon")
 [wazho/ns-joycon](https://github.com/wazho/ns-joycon/ "wazho/ns-joycon")
 [Davidobot/BetterJoy](https://github.com/Davidobot/BetterJoy "Davidobot/BetterJoy")
