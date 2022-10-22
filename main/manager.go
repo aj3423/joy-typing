@@ -52,7 +52,7 @@ func (m *Manager) OnReadWriteError(
 	// If any r/w error occurs, the connection must be broken,
 	// but the zombie connection still stays in system BT manager for a while,
 	// so forcely disconnect it to avoid that period of time.
-	m.remove(jc, true)
+	go m.remove(jc, true)
 }
 func (m *Manager) OnButton(
 	jc joycon.Controller,

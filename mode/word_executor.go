@@ -102,9 +102,12 @@ type shell struct {
 }
 
 func (s *shell) exec(_ *wordArray) error {
-	cm := exec.Command(s.cmd[0], s.cmd[1:]...)
-	_, e := cm.CombinedOutput()
-	return e
+	// launch shell commands blocks the main app, have to launch a goroutine
+	go func() {
+		cm := exec.Command(s.cmd[0], s.cmd[1:]...)
+		cm.CombinedOutput()
+	}()
+	return nil
 }
 
 // factory for generting fixed shell, which are configured in file
