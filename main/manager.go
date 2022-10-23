@@ -45,6 +45,7 @@ func (m *Manager) OnReadWriteError(
 	jc joycon.Controller, err error,
 ) {
 	log.Errorf("%s: %s", jc.Side().String(), err.Error())
+	go beeep.Notify("R/W error", jc.Side().String(), "")
 
 	m.mu.Lock()
 	defer m.mu.Unlock()
